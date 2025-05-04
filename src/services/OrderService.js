@@ -666,6 +666,10 @@ const getDetailsOrderOfMe = (userId, orderId) => {
 						select: "_id name", // Select only the 'slug' field of the product
 					},
 					{
+						path: "paymentMethod",
+						select: "_id type",
+					},
+					{
 						path: "orderItems.product",
 						select: "countInStock slug", // Select only the 'slug' field of the product
 						model: "Product", // Specify the model to prevent path collision

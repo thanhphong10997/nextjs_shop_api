@@ -19,7 +19,7 @@ const pushMessageToFirebase = async (data) => {
 		tokens: deviceTokens,
 	};
 
-	await getMessaging().sendMulticast(message);
+	await getMessaging().sendEachForMulticast(message);
 };
 
 const getUserAndAdminTokens = async (userId) => {
